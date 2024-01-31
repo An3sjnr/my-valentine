@@ -149,6 +149,8 @@ function trackYesButtonClick() {
                 
                 var bubble = document.getElementById("piet");
                 bubble.style.display = "block";
+                 var bubble = document.getElementById("bubble");
+                bubble.style.display = "none";
             }
             moveButton();
         }
