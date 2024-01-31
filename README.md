@@ -156,6 +156,8 @@ function trackYesButtonClick() {
         function showMessage() {
             var bubble = document.getElementById("bubble");
             bubble.style.display = "none";
+            var bubble = document.getElementById("piet");
+                bubble.style.display = "none";
             document.getElementById("message").style.display = "block";
             document.getElementById("noButton").style.display = "none";
             document.getElementById("yesButton").style.display = "none";
