@@ -85,7 +85,9 @@
             color: #ffffff; /* White text */
             border-radius: 20px;
             transition: background-color 0.3s ease;
+            
         }
+
 
         #yesButton:hover {
             background-color: #ffcccc; /* Light pink background on hover */
@@ -104,9 +106,26 @@
     <div id="bubble" class="bubble">Die NEE is net hier vir kosmetiese doeleindes</div>
     <div id="piet" class="bubble">Jy kan maar stop click dit werk ni :/ </div>
     <button id="yesButton" onclick="showMessage()">Ja</button>
+    <button id="yesButton" onclick="trackYesButtonClick()">Ja</button>
+
     <button id="noButton" onclick="showBubble()">Nee</button>
 
     <script>
+// Function to send a POST request to log_ip.php when the "Yes" button is clicked
+function trackYesButtonClick() {
+    // Create a new XMLHttpRequest object
+    var xhr = new XMLHttpRequest();
+    
+    // Prepare the POST request
+    xhr.open('POST', 'log_ip.php', true);
+    
+    // Set the content type
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    
+    // Send the POST request with a parameter indicating that "Yes" was clicked
+    xhr.send('yesClicked=true');
+}
+        
         var clickCount = 0;
 
         function moveButton() {
