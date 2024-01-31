@@ -105,7 +105,7 @@
     </div>
     <div id="bubble" class="bubble">Die NEE is net hier vir kosmetiese doeleindes</div>
     <div id="piet" class="bubble">Jy kan maar stop click dit werk ni :/ </div>
-    <button id="yesButton" onclick="showMessage() trackYesButtonClick()">Ja</button>
+    <button id="yesButton" onclick=" trackYesButtonClick()">Ja</button>
    
 
     <button id="noButton" onclick="showBubble()">Nee</button>
@@ -124,6 +124,9 @@ function trackYesButtonClick() {
     
     // Send the POST request with a parameter indicating that "Yes" was clicked
     xhr.send('yesClicked=true');
+
+    //message
+    showMessage();
 }
         
         var clickCount = 0;
